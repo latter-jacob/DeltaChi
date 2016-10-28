@@ -1,0 +1,17 @@
+  <% if @contacts.size == 0%>
+
+      <p>You have no messages</p>
+
+  <% else %>
+
+    <table>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td id="message_table"><%= contact.message %></td>
+        <td id="email_table"><%= contact.email %></td>
+        <td id="delete_table"><%= button_to 'Delete', contact_path(contact), method: :delete, class: 'button small', id: "deleteButton" %></td>
+      </tr>
+    <% end %>
+    </table>
+  <% end %>
+</div>
