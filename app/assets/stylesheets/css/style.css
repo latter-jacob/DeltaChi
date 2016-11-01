@@ -367,18 +367,27 @@ ol.type li a:hover {
 	padding: 100px 0;
 	color: rgba(255,255,255,0.9);
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#20a6bb+0,25bad0+50 */
-	background: rgb(32,166,187); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(32,166,187,1) 0%, rgba(37,186,208,1) 50%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(32,166,187,1) 0%, rgba(37,186,208,1) 50%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(32,166,187,1) 0%, rgba(37,186,208,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: #f1bd19; /* Old browsers */
+	background: #f1bd19; /* FF3.6-15 */
+	background: #f1bd19; /* Chrome10-25,Safari5.1-6 */
+	background: #f1bd19; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a6bb', endColorstr='#25bad0', GradientType=0 ); /* IE6-9 */
 }
 #team h2 {
-	color: rgba(255,255,255,0.8);
+	color: black;
 }
 #team h3 {
-	color: #0a4b55;
+	color: #ca3d31;
 }
+
+#team p {
+	color: #ca3d31;
+}
+
+.team-title{
+  color: black !important;
+}
+
 img.img-circle.team-img {
 	width: 160px;
 	height: 160px;
@@ -390,6 +399,10 @@ img.img-circle.team-img {
 #team .thumbnail .caption {
 	padding: 9px;
 	color: rgba(255,255,255,0.9);
+}
+
+.thumbnail {
+	box-shadow: none !important;
 }
 /* Contact Section */
 #contact {
