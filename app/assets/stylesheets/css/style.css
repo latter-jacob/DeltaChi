@@ -393,7 +393,7 @@ img.img-circle.team-img {
 }
 /* Contact Section */
 #contact {
-	background: url(../img/contact-bg.jpg) no-repeat center top;
+	background: url(../img/kermit.jpg) no-repeat center top;
 	background-color: #7bc3d1;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -486,17 +486,27 @@ color: #ccc;
 }
 /* Footer Section*/
 #footer {
-	background: #03252b;
-	padding: 25px 0 20px 0;
+	background: #ca3d31;
+	padding: 6px 0 0px 0;
+}
+
+.social-ul{
+	display: inline-flex;
+	list-style-type: none;
+}
+.social-li{
+	width: 2.9rem;
+	padding-left: 1rem;
 }
 #footer p {
 	font-size: 13px;
+
 }
 #footer a {
 	color: #aaa;
 }
 #footer a:hover {
-	color: #25BAD0;
+	color: orange;
 }
 
 /* Media Queries */
