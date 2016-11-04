@@ -218,14 +218,14 @@ header .intro-text {
 	background: rgb(32,166,187); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(32,166,187,1) 0%, rgba(37,186,208,1) 50%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(32,166,187,1) 0%, rgba(37,186,208,1) 50%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(32,166,187,1) 0%, rgba(37,186,208,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: #f1bd19; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a6bb', endColorstr='#25bad0', GradientType=0 ); /* IE6-9 */
 }
 #about h2 {
-	color: rgba(255,255,255,0.8);
+	color: black;
 }
 #about h4 {
-	color: #0a4b55;
+	color: black;
 }
 #about .about-text {
 	margin-left: 10px;
@@ -233,6 +233,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a6bb', end
 #about p {
 	margin-top: 20px;
 	margin-bottom: 30px;
+	color: #ca3d31;
 }
 /* Portfolio Section */
 #portfolio {
@@ -362,6 +363,11 @@ ol.type li a:hover {
 	padding: 5px;
 	color: #E87E04;
 }
+
+.about-div {
+    float: right;
+}
+
 /* Team Section */
 #team {
 	padding: 100px 0;
