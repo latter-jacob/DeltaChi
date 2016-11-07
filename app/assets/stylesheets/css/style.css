@@ -210,7 +210,7 @@ header .intro-text {
 	background: #25BAD0;
 	border-radius: 50%;
 }
-/* About Section */
+/* **************************About Section */
 #about {
 	padding: 100px 0;
 	color: rgba(255,255,255,0.9);
@@ -235,10 +235,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a6bb', end
 	margin-bottom: 30px;
 	color: #ca3d31;
 }
-/* Portfolio Section */
+/***************************** Portfolio Section */
 #portfolio {
 	padding: 100px 0;
-	background: #053740;
+	background: #ca3d31;
 }
 .categories {
 	padding-bottom: 30px;
@@ -368,7 +368,7 @@ ol.type li a:hover {
     float: right;
 }
 
-/* Team Section */
+/* ***************************Team Section */
 #team {
 	padding: 100px 0;
 	color: rgba(255,255,255,0.9);
@@ -410,7 +410,7 @@ img.img-circle.team-img {
 .thumbnail {
 	box-shadow: none !important;
 }
-/* Contact Section */
+/********************* Contact Section */
 #contact {
 	background: url(../img/kermit.jpg) no-repeat center top;
 	background-color: #7bc3d1;
