@@ -1,7 +1,7 @@
 class HomesController < ApplicationController
   def index
     @contact = Contact.new
-
+    @carousel_items = CarouselItem.all
   end
 
   def create

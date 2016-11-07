@@ -1,0 +1,23 @@
+
+<h1>List of Pictures</h1>
+<%= link_to "Add Picture", new_carousel_item_path, class: "button" %>
+
+
+  <table class="carousel_table">
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+    </tr>
+
+    <% @carousel_items.each do |item| %>
+
+      <tr>
+        <td><%= image_tag "#{item.file_name}", class:"item" %></td>
+        <td><p class="itemTitle"><%= item.title %></p></td>
+        <td><p class="itemBody"><%= item.body %></p></td>
+        <td><%= link_to "Delete slide", carousel_item_path(item), method: :delete, class: "button" %></td>
+      </tr>
+    <% end %>
+  </table>
