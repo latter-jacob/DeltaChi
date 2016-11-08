@@ -78,6 +78,13 @@ ul, ol {
 	width: 19rem;
 	margin-top: -1.5rem;
 }
+
+.clemson-logo{
+	width: 11rem;
+	margin-top: -2.9rem;
+	margin-left: 19rem;
+}
+
 #menu.navbar-default {
 	background-color: rgba(248, 248, 248, 0);
 	border-color: rgba(231, 231, 231, 0);
