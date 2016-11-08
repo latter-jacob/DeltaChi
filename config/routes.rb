@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:new, :create, :destroy, :index]
   resources :carousel_items, only: [:new, :create, :destroy, :index]
-
+  resources :execs
 
 end

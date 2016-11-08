@@ -1,0 +1,24 @@
+<h1>Execs</h1>
+
+<%= link_to "Add Exec", new_exec_path, class: "button" %>
+
+
+  <table class="carousel_table">
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Title</th>
+      <th></th>
+    </tr>
+
+    <% @execs.each do |item| %>
+
+      <tr>
+
+        <td><%= image_tag item.file_name, class:"item" %></td>
+        <td><p class="itemTitle"><%= item.name %></p></td>
+        <td><p class="itemBody"><%= item.title %></p></td>
+        <td><%= link_to "Delete Exec", exec_path(item), method: :delete, class: "button" %></td>
+      </tr>
+    <% end %>
+  </table>

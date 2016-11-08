@@ -1,0 +1,15 @@
+<h2>Add a new exec</h2>
+
+<%= form_for @exec, :url => {:action => "create"} do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :image %>
+  <%= f.file_field :file_name %>
+
+  <%= f.submit %>
+<% end %>
