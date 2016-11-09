@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_action :visitor!
+  before_action :admin!
 
   def new
     @contact = Contact.new
@@ -17,24 +19,19 @@ class ContactsController < ApplicationController
   end
 
   def index
-    # if current_user.admin?
-      @contacts = Contact.all.sort_by{|contact| contact.created_at}
-    # else
-    #   flash[:error] = "You Have No Permissions to access this page."
-    #   redirect_to root_path
-    # end
+    @contacts = Contact.all.sort_by{|contact| contact.created_at}
   end
 
   def destroy
     @contact = Contact.find(params[:id])
-    # if current_user.admin?
+    if current_user.admin?
       @contact.destroy
       flash[:notice] = "Message Deleted"
       redirect_to contacts_path
-    # else
-    #   flash[:error] = "You Have No Permissions to Delete This Message. "
-    #   redirect_to contacts_path
-    # end
+    else
+      flash[:error] = "You Have No Permissions to Delete This Message. "
+      redirect_to contacts_path
+    end
   end
 
   private
