@@ -5,6 +5,11 @@
   <% else %>
 
     <table>
+      <tr>
+        <th>Message</th>
+        <th>Email</th>
+        <th></th>
+      </tr>
     <% @contacts.each do |contact| %>
       <tr>
         <td id="message_table"><%= contact.message %></td>
