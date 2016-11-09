@@ -9,6 +9,7 @@
       <th>Name</th>
       <th>Title</th>
       <th></th>
+      <th></th>
     </tr>
 
     <% @execs.each do |item| %>
@@ -18,6 +19,7 @@
         <td><%= image_tag item.file_name, class:"item" %></td>
         <td><p class="itemTitle"><%= item.name %></p></td>
         <td><p class="itemBody"><%= item.title %></p></td>
+        <td><%= link_to "Edit Exec", edit_exec_path(item), class: "button" %></td>
         <td><%= link_to "Delete Exec", exec_path(item), method: :delete, class: "button" %></td>
       </tr>
     <% end %>

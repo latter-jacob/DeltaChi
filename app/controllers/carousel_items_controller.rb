@@ -1,55 +1,42 @@
 class CarouselItemsController < ApplicationController
-  # before_action :visitor!
+  before_action :visitor!
+  before_action :admin!
 
   def index
-    # if current_user.type == "Admin"
       @carousel_items = CarouselItem.all
-    # else
-    #   flash[:error] = "You don't rights to access this page"
-    #   redirect_to root_path
-    # end
   end
 
 
   def new
-    # if current_user.type == "Admin"
       @carousel_item = CarouselItem.new()
-    # else
-    #   flash[:error] = "You don't rights to access this page"
-    #   redirect_to root_path
-    # end
   end
 
   def create
-    # if current_user.type == "Admin"
-    #   unless CarouselItem.all.size >= 5
+     if current_user.admin?
         @carousel_item = CarouselItem.new(carousel_item_params)
         if @carousel_item.save!
+          flash[:notice] = "Pic Added."
           redirect_to root_path
         else
           flash[:errors] = "Something went wrong."
-          redirect_to new_admin_carousel_item_path(current_user)
+          redirect_to root_path
         end
-    #   else
-    #     flash[:errors] = "You have reached the limit of slides for the carousel, please delete one if you want to add new ones."
-    #     redirect_to new_admin_carousel_item_path(current_user)
-    #   end
-    # else
-    #   flash[:error] = "You don't rights to access this page"
-    #   redirect_to root_path
-    # end
+      else
+        flash[:error] = "You don't rights to access this page"
+        redirect_to root_path
+     end
   end
 
   def destroy
-    # if current_user.type == "Admin"
+    if current_user.admin?
       @carousel_item = CarouselItem.find(params[:id])
       @carousel_item.destroy
       flash[:notice] = "Slice Deleted"
       redirect_to root_path
-    # else
-    #   flash[:error] = "You Have No Permissions to Delete This item. "
-    #   redirect_to root_path
-    # end
+    else
+      flash[:error] = "You Have No Permissions to Delete This item. "
+      redirect_to root_path
+    end
   end
 
 

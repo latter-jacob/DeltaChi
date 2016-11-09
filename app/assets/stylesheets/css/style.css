@@ -535,6 +535,11 @@ color: #ccc;
 	color: orange;
 }
 
+.admin a {
+	color: #ca3d31 !important;
+	float: right;
+}
+
 /* Media Queries */
 @media (max-width: 1024px) {
 .intro H1 {

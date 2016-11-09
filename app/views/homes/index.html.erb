@@ -126,6 +126,10 @@
           <% end %>
       </div>
     </div>
+    <% if current_user.nil? %>
+    <% elsif current_user.admin? %>
+      <%= link_to "Add More Pictures", new_carousel_item_path, class: "button" %>
+    <% end %>
   </div>
 </div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Team Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -148,6 +152,11 @@
       <!-- <% end %> -->
     </div>
   </div>
+  <% if current_user.nil? %>
+  <% elsif current_user.admin? %>
+  <%= link_to "Add Execs", new_exec_path, class: "button" %>
+  <%= link_to "Edit Execs", execs_path, class: "button" %>
+  <% end %>
 </div>
 <!--************************************* Contact Section ****************************-->
 <div id="contact" class="text-center">
@@ -188,6 +197,7 @@
     </div>
   </div>
 </div>
+<!--*************************footer*****************************  -->
 <div id="footer">
   <div class="social-media text-center">
     <ul class="social-ul">
@@ -199,7 +209,12 @@
     </ul>
   </div>
   <div class="container text-center">
-      <p>Made by <a href="https://latter-jacob.github.io" rel="nofollow">Jacob Latter</a></p>
+    <p>Made by <a href="https://latter-jacob.github.io" rel="nofollow">Jacob Latter</a></p>
+    <% if current_user.nil? %>
+      <p class="admin"><%= link_to '∆X', new_user_session_path %></p>
+    <% else %>
+      <p class="admin"><%= link_to '∆X', destroy_user_session_path, method: :delete %></p>
+    <% end %>
   </div>
 </div>
 </body>
