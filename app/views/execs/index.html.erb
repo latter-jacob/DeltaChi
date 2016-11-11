@@ -1,9 +1,6 @@
 <h1>Execs</h1>
 
-<%= link_to "Add Exec", new_exec_path, class: "button" %>
-
-
-  <table class="carousel_table">
+  <table class="table table-bordered table-striped">
     <tr>
       <th>Image</th>
       <th>Name</th>
@@ -14,7 +11,7 @@
 
     <% @execs.each do |item| %>
 
-      <tr>
+      <tr id="sortable">
 
         <td><%= image_tag item.file_name, class:"item" %></td>
         <td><p class="itemTitle"><%= item.name %></p></td>
@@ -24,3 +21,5 @@
       </tr>
     <% end %>
   </table>
+
+  <%= link_to "Add Exec", new_exec_path, class: "button" %>
