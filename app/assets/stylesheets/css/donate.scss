@@ -1,0 +1,24 @@
+.donate-button{
+  width: 34rem  !important ;
+  height: 13rem  !important;
+  line-height: 3 !important;
+  cursor: pointer !important;
+  font-size: 2.9rem !important;
+  background-color: #ca3d31 !important;
+  color: #f1bd19 !important;
+}
+
+.donate-button:hover{
+  background-color: #982e25 !important ;
+}
+
+#donate-header {
+	padding: 20px;
+	transition: all 0.8s;
+  background-color: #ca3d31;
+  border-color: #ca3d31;
+}
+
+.donate-sub{
+  color: black;
+}
