@@ -1,0 +1,89 @@
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation -->
+<nav id="donate-header" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="/">
+        <%= image_tag 'DX-logo-2.png', class: "DX-logo" %>
+        <%= image_tag 'clemsonWord-logo.png', class: "clemson-logo" %>
+      </a>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- *******************History*********************** -->
+<div id="about">
+  <div class="container" id="history">
+    <div class="col-md-8 col-md-offset-2 section-title text-center">
+      <h2>History of Delta Chi</h2>
+    </div>
+
+    <div class="col-xs-12 col-md-8">
+      <h3 class="donate-sub">
+        Delta Chi Historical Facts
+      </h3>
+      <ul class="history-ul">
+        <li>Delta Chi was founded on October 13th, 1890 at Cornell University as a law fraternity</li>
+        <li>The Lamp of Learning has been the fraternity's symbol for education since 1890</li>
+        <li>Delta Chi became an international fraternity with the founding of the Osgoode Hall Chapter in Toronto, Canada on February 13, 1897</li>
+        <li>Delta Chi became a general fraternity after much debate and controversy in 1922</li>
+        <li>Delta Chi officially abolished "Hell Week" in 1929</li>
+        <li>The Delta Chi Educational Foundation was established in 1954</li>
+        <li>Headquarters Office was moved to its present location in Iowa City, Iowa</li>
+        <li>The Order of the White Carnation was created to honor outstanding alumni with Victor T. Johnson becoming the first inductee at the 1975 Chicago Convention</li>
+      </ul>
+
+
+    </div>
+    <div class="col-md-12">
+      <h3 class="donate-sub">
+        Sir Edward Coke <span class="coke">(Our Spiritual Founding Father)</span>
+      </h3>
+      <p class="col-md-9">
+        If there was one man who personifies all the principles that Delta Chi was founded upon, that man would be Sir Edward Coke (pronounced "Cook").
+        Sir Edward Coke has long been recongized as our Spiritual Founder embodying the traits that every Delta Chi strives for.
+        Sir Edward Coke was one of the most eminent English Jurists in the history of English law. He entered Parliament in 1589 and later became Solicitor General and Speaker of the House of Commons. In 1593, he became the Attorney General over Sir Francis Bacon, one of Coke's biggest enemies. He earned a reputation as a severe prosecutor, notably at the trial of Sir Walter Raleigh. He held a favorable position within the court of King James I. In 1606, he became Chief Justice of the Common Pleas. In this position, Coke became the champion of common law against the encroachments of the royal prerogative. He declared royal proclamations that were contrary to law null and void. Although his historical arguments were frequently based on false interpretations of early documents, as in the case of the Magna Carter, his reasoning was brilliant, and his conclusions were impressive. His constant collisions with the King and the numerous enmities he developed led to his downfall. Bacon was one of the foremost figures in engineering his dismissal in 1616.
+        By personal and political influence, Coke returned to politics on the Privy Council and was elected in 1620 to Parliament again.
+        He became a leader of the popular faction in opposition to James I and Charles I.
+        Coke proposed and wrote the historic "Petition of Rights" in 1628.
+      </p>
+      <%= image_tag "sir_coke.gif", class: "col-md-3"  %>
+    </div>
+    <div class="col-md-12">
+      <p class="founding-fathers">Founding Fathers</p>
+      <h3 class="donate-sub">
+        Albert Sullard Barnes
+      </h3>
+      <p class="col-md-9">
+        Barnes was one of only a few of the founders who continued to work closely with the fraternity after graduating. He, along with Monroe Marsh Sweetland, was a frequent guest of the Cornell chapter speaking at banquets and other functions. One of his best known quotations was, "Delta Chi is not a weekend or once-a-year affair, but a lifelong opportunity and privilege."
+      </p>
+      <%= image_tag "founding_fathers/barnes.gif", class: "col-md-2"  %>
+    </div>
+
+  </div>
+
+</div>
+<!-- ***************************************** -->
+<div id="footer">
+  <div class="social-media text-center">
+    <ul class="social-ul">
+      <li class="social-li"><%= link_to image_tag('clemson-logo.png'), 'http://www.clemson.edu' %> </li>
+      <li class="social-li"><%= link_to image_tag('twitter-logo.png'), 'https://twitter.com/DeltaChiClemson' %> </li>
+      <li class="social-li"><%= link_to image_tag('facebook-logo.png'), 'https://www.facebook.com/deltachiclemson' %> </li>
+      <li class="social-li"><%= link_to image_tag('DX-logo.png'), 'http://deltachi.org/' %> </li>
+      <li class="social-li"><%= link_to image_tag('email-logo.png'), 'mailto:dchi@clemson.edu' %> </li>
+    </ul>
+  </div>
+  <div class="container text-center">
+    <p>Made by <a href="https://latter-jacob.github.io" rel="nofollow">Jacob Latter</a></p>
+    <% if current_user.nil? %>
+      <p class="admin"><%= link_to '∆X', new_user_session_path %></p>
+    <% else %>
+      <p class="admin"><%= link_to '∆X', destroy_user_session_path, method: :delete %></p>
+    <% end %>
+  </div>
+</div>
+</body>
+</html>

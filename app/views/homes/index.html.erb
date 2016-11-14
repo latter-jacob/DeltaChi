@@ -30,10 +30,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#page-top" class="page-scroll">Home</a></li>
-        <li><a href="#services" class="page-scroll">History</a></li>
         <li><a href="#about" class="page-scroll">About</a></li>
         <li><a href="#portfolio" class="page-scroll">Pictures</a></li>
         <li><a href="#team" class="page-scroll">Officers</a></li>
+        <li><a href="#rush" class="page-scroll">Rush</a></li>
         <li><a href="#contact" class="page-scroll">Contact</a></li>
         <li><%= link_to "Donate", donate_path  %></li>
       </ul>
@@ -57,37 +57,6 @@
     </div>
   </div>
 </header>
-<!--******************* History Section **************-->
-<div id="services" class="text-center">
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2 section-title">
-      <h2>Where We Come From</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor apibus lornare diam commodo nibh.</p>
-    </div>
-    <div class="row">
-      <div class="col-xs-6 col-md-3">
-        <h4>Sir Edward Coke</h4>
-        <%= image_tag "sir_coke.gif" , class: "history-pic"%>
-        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <h4>Founding Fathers</h4>
-        <%= image_tag "DChiFounders.gif", class: "history-pic" %>
-        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <h4>Jimmy V Foundation</h4>
-        <%= image_tag "the_foundation.gif", class: "history-pic" %>
-        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <h4>This other thing</h4>
-        <%= image_tag "clemson-logo.png", class: "history-pic" %>
-        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- ******************************************About Section************************************ -->
 <div id="about">
   <div class="container">
@@ -104,7 +73,7 @@
       <div class="col-xs-12 col-md-6 about-div">
         <div class="about-text">
           <h4>Who We Are</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo.</p>
+          <p>Lorem ipsum dolor <%= link_to 'founding fathers', founding_fathers_path %> sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo.</p>
           <h4>What We Do</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante.</p>
           <h4>Why Choose Us</h4>
@@ -163,6 +132,38 @@
   <%= link_to "Edit Execs", execs_path, class: "button" %>
   <% end %>
 </div>
+<!--******************* History Section **************-->
+<div id="rush" class="text-center">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2 section-title">
+      <h2>Rush</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor apibus lornare diam commodo nibh.</p>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <h4>Sir Edward Coke</h4>
+        <%= image_tag "sir_coke.gif" , class: "history-pic"%>
+        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <h4>Founding Fathers</h4>
+        <%= image_tag "DChiFounders.gif", class: "history-pic" %>
+        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <h4>Jimmy V Foundation</h4>
+        <%= image_tag "the_foundation.gif", class: "history-pic" %>
+        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <h4>This other thing</h4>
+        <%= image_tag "clemson-logo.png", class: "history-pic" %>
+        <p class="history-info">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--************************************* Contact Section ****************************-->
 <div id="contact" class="text-center">
   <div class="overlay">

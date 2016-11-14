@@ -1,0 +1,19 @@
+<%= form_for @founding_father, :url => {:action => "create"} do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.label :birthday %>
+  <%= f.text_field :birthday %>
+
+  <%= f.label :deathday %>
+  <%= f.text_field :deathday %>
+
+  <%= f.label :image %>
+  <%= f.file_field :file_name %>
+
+  <%= f.submit %>
+<% end %>
