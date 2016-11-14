@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:new, :create, :destroy, :index]
   resources :carousel_items, only: [:new, :create, :destroy, :index]
+  resources :founding_fathers, only: [:new, :create, :index]
   resources :execs
+
   get '/donate', to: 'homes#donate'
 
 
