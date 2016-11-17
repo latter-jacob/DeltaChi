@@ -382,15 +382,11 @@ ol.type li a:hover {
     float: right;
 }
 
-/* ***************************Team Section */
+/* ***************************Team Section ********************************/
 #team {
 	padding: 100px 0;
 	color: rgba(255,255,255,0.9);
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#20a6bb+0,25bad0+50 */
 	background: #f1bd19; /* Old browsers */
-	background: #f1bd19; /* FF3.6-15 */
-	background: #f1bd19; /* Chrome10-25,Safari5.1-6 */
-	background: #f1bd19; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a6bb', endColorstr='#25bad0', GradientType=0 ); /* IE6-9 */
 }
 #team h2 {
@@ -406,6 +402,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a6bb', end
 
 .team-title{
   color: black !important;
+}
+
+.others {
+    padding-top: 66rem;
 }
 
 img.img-circle.team-img {
