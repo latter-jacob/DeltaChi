@@ -2,7 +2,7 @@ class HomesController < ApplicationController
   def index
     @contact = Contact.new
     @carousel_items = CarouselItem.all
-    @president = Exec.order("created_at ASC").first
+    @presidents = Exec.order("created_at ASC").limit(1)
     @eletes = Exec.order("created_at ASC").limit(4).offset(1)
     @others = Exec.order("created_at ASC").offset(5)
   end
