@@ -103,23 +103,50 @@
     <% if current_user.nil? %>
     <% elsif current_user.admin? %>
       <%= link_to "Add More Pictures", new_carousel_item_path, class: "button" %>
+      <%= link_to "Pictures", carousel_items_path, class: "button" %>
     <% end %>
   </div>
 </div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Team Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <div id="team" class="text-center">
   <div class="container">
+
     <div class="col-md-8 col-md-offset-2 section-title">
       <h2>Meet the Team</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor apibus lornare diam commodo nibh.</p>
     </div>
     <div id="row">
-      <!-- <%= @execs.each do |pic| %> -->
+    <div class="col-md-12 col-sm-12">
+      <div class="thumbnail"><%= image_tag @president.file_name , class: 'img-circle team-img'%>
+        <div class="caption">
+          <h3 class="team-title"> <%= @president.name %> </h3>
+          <p><%= @president.title %></p>
+          <p><%= @president.bio %></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="row">
+      <!-- <%= @eletes.each do |elete| %> -->
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"><%= image_tag pic.file_name , class: 'img-circle team-img'%>
+        <div class="thumbnail"><%= image_tag elete.file_name , class: 'img-circle team-img'%>
           <div class="caption">
-            <h3 class="team-title"> <%= pic.name %> </h3>
-            <p><%= pic.title %></p>
+            <h3 class="team-title"> <%= elete.name %> </h3>
+            <p><%= elete.title %></p>
+            <p><%= elete.bio %></p>
+
+          </div>
+        </div>
+      </div>
+      <!-- <% end %> -->
+    </div>
+
+    <div id="row" class="others">
+      <!-- <%= @others.each do |other| %> -->
+      <div class="col-md-3 col-sm-6 team">
+        <div class="thumbnail"><%= image_tag other.file_name , class: 'img-circle team-img'%>
+          <div class="caption">
+            <h3 class="team-title"> <%= other.name %> </h3>
+            <p><%= other.title %></p>
           </div>
         </div>
       </div>

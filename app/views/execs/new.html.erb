@@ -3,10 +3,13 @@
 <%= form_for @exec, :url => {:action => "create"} do |f| %>
 
   <%= f.label :name %>
-  <%= f.text_area :name %>
+  <%= f.text_field :name %>
 
   <%= f.label :title %>
   <%= f.text_field :title %>
+
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
 
   <%= f.label :image %>
   <%= f.file_field :file_name %>

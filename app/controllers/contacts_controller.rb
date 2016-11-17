@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
-  before_action :visitor!
-  before_action :admin!
+  before_action :visitor!, except: [:new, :create]
+  before_action :admin!, except: [:new, :create]
 
   def new
     @contact = Contact.new

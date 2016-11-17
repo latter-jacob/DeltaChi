@@ -1,21 +1,23 @@
 <h1>Execs</h1>
 
-  <table class="table table-bordered table-striped">
+  <table class="table-bordered table-striped">
     <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Title</th>
-      <th></th>
-      <th></th>
+      <th id="exec-image">Image</th>
+      <th id="exec-name">Name</th>
+      <th id="exec-title">Title</th>
+      <th id="exec-bio">Bio</th>
+      <th id="exec-button"></th>
+      <th id="exec-button"></th>
     </tr>
 
     <% @execs.each do |item| %>
 
       <tr id="sortable">
 
-        <td><%= image_tag item.file_name, class:"item" %></td>
+        <td ><%= image_tag item.file_name, id: "exec-image" %></td>
         <td><p class="itemTitle"><%= item.name %></p></td>
         <td><p class="itemBody"><%= item.title %></p></td>
+        <td><p class="itemBody"><%= item.bio %></p></td>
         <td><%= link_to "Edit Exec", edit_exec_path(item), class: "button" %></td>
         <td><%= link_to "Delete Exec", exec_path(item), method: :delete, class: "button" %></td>
       </tr>

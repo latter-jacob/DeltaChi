@@ -3,7 +3,8 @@ class ExecsController < ApplicationController
   before_action :admin!
 
   def index
-    @execs = Exec.all
+    @presidents = Exec.order("created_at ASC").first
+    @execs = Exec.all.order("created_at ASC")
   end
 
 
@@ -43,6 +44,6 @@ class ExecsController < ApplicationController
   private
 
   def exec_params
-    params.require(:exec).permit(:name, :title, :file_name)
+    params.require(:exec).permit(:name, :title, :file_name, :bio)
   end
 end

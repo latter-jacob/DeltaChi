@@ -1,6 +1,6 @@
 class FoundingFathersController < ApplicationController
-  before_action :visitor!
-  before_action :admin!
+  before_action :visitor!, except: [:index]
+  before_action :admin!, except: [:index]
 
   def index
     @founding_fathers = FoundingFather.all
