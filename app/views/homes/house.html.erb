@@ -1,0 +1,56 @@
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation -->
+<nav id="donate-header" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="/">
+        <%= image_tag 'DX-logo-2.png', class: "DX-logo" %>
+        <%= image_tag 'clemsonWord-logo.png', class: "clemson-logo" %>
+      </a>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- *******************DONATE*********************** -->
+<div id="about">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2 section-title text-center">
+      <h2>House</h2>
+    </div>
+
+      <div class="col-xs-12 col-md-6">
+        <h3 class="donate-sub center" >A house is made of bricks and beams, but a home is made of hopes and dreams.</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <%= image_tag 'deltaChiHouse.jpg' %>
+      </div>
+
+  </div>
+</div>
+
+<div id="footer">
+  <div class="social-media text-center">
+    <ul class="social-ul">
+      <li class="social-li"><%= link_to image_tag('clemson-logo.png'), 'http://www.clemson.edu' %> </li>
+      <li class="social-li"><%= link_to image_tag('twitter-logo.png'), 'https://twitter.com/DeltaChiClemson' %> </li>
+      <li class="social-li"><%= link_to image_tag('facebook-logo.png'), 'https://www.facebook.com/deltachiclemson' %> </li>
+      <li class="social-li"><%= link_to image_tag('DX-logo.png'), 'http://deltachi.org/' %> </li>
+      <li class="social-li"><%= link_to image_tag('email-logo.png'), 'mailto:dchi@clemson.edu' %> </li>
+    </ul>
+  </div>
+  <div class="container text-center">
+    <p>Made by <a href="https://latter-jacob.github.io" rel="nofollow">Jacob Latter</a></p>
+    <% if current_user.nil? %>
+      <p class="admin"><%= link_to '∆X', new_user_session_path %></p>
+    <% else %>
+      <p class="admin"><%= link_to '∆X', destroy_user_session_path, method: :delete %></p>
+    <% end %>
+  </div>
+</div>
+</body>
+</html>
