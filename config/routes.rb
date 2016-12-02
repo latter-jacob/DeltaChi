@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :execs
 
   get '/donate', to: 'homes#donate'
+  get '/house', to: 'homes#house'
 
 
 end
